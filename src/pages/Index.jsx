@@ -12,7 +12,12 @@ export const Index = () => {
             <div className="index-wrapper">
                 <h1>Hello World</h1>
                 <section className={styles.contentList__wrapper}>
-                    <h1>News Sections</h1>
+                    <div className={styles.news__section}>
+                        <h1>News Sections</h1>
+                        <span className="material-symbols-outlined">
+                            feed
+                        </span>
+                    </div>
                     <div className={styles.contentList__subWrapper}>
                         {contentLists.map((contentList, idx) => (
                             <ContentList
