@@ -1,0 +1,20 @@
+.footer-container{
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+}
+
+.footer-inside{
+    display: grid;
+    border-top: 1px grey solid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    text-align: start;
+    height: 175px;
+    font-size: 10px;
+    padding: 16px;
+}
