@@ -18,12 +18,14 @@
 
 /* hamburger styling */
 .hamburger {
-  margin: auto 0;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .bar {
@@ -42,17 +44,17 @@
 }
 
 .hamburger.active .bar:nth-child(2) {
-  -webkit-transform: translateY(19px) rotate(45deg);
-  -ms-transform: translateY(19px) rotate(45deg);
-  -o-transform: translateY(19px) rotate(45deg);
-  transform: translateY(19px) rotate(45deg);
+  -webkit-transform: translateY(16px) rotate(45deg);
+  -ms-transform: translateY(16px) rotate(45deg);
+  -o-transform: translateY(16px) rotate(45deg);
+  transform: translateY(16px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(4) {
-  -webkit-transform: translateY(-19px) rotate(-45deg);
-  -ms-transform: translateY(-19px) rotate(-45deg);
-  -o-transform: translateY(-19px) rotate(-45deg);
-  transform: translateY(-19px) rotate(-45deg);
+  -webkit-transform: translateY(-16px) rotate(-45deg);
+  -ms-transform: translateY(-16px) rotate(-45deg);
+  -o-transform: translateY(-16px) rotate(-45deg);
+  transform: translateY(-16px) rotate(-45deg);
 }
 
 /* nav bar styling */
