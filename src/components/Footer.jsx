@@ -35,20 +35,20 @@ export const Footer = () => {
             <h3>Contact BCIT Daily</h3>
             <br></br>
 
-            {/*Account items*/}
-            <a href="#"><p>Submit FeedBack</p></a>
-            <a href="#"><p>Help Center</p></a>
-            {/*br's are there to mimic what CBC had */}
-            <p>Audience Relations, CBC
-              <br></br>
-              P.O. Box 500 Station A
-              <br></br>
-              Toronto, ON
-              <br></br>
-              Canada, M5W 1E6</p>
-            <p>Toll-free (Canada only):
-              <br></br>
-              1-866-306-4636</p>
+          {/*Account items*/}
+          <a href="#"><p>Submit FeedBack</p></a>
+          <a href="#"><p>Help Center</p></a>
+          {/*br's are there to mimic what CBC had */}
+          <p>Audience Support, BCIT Daily
+            <br></br>
+            555 Seymour St, 
+             <br></br>
+             Vancouver, BC
+             <br></br>
+             Canada, V6B 3H6</p>
+          <p>Toll-free (Canada only):
+            <br></br>
+             1-250-000-0960</p>
           </div>
           {/*Grid Column for about*/}
           <div className="footerColumn about">
