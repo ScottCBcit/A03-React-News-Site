@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./article.module.css";
 import ArticleContent from "./ArticleContent.json";
 
-export const Article = () => {
-  console.log(ArticleContent.articles);
+function Article() {
+
   return (
     <section className={styles.articlesSection}>
       {ArticleContent.articles.map((content, idx) => (
@@ -18,9 +18,10 @@ export const Article = () => {
             {content.author}
             <time className={`${styles.authorAndDate}`}>{content.date}</time>
           </div>
-          <p className={styles.article}>{content.content}</p>
+            <p className={styles.article}>{content.content}</p>
         </div>
       ))}
     </section>
   );
-};
+}
+export default Article;

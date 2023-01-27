@@ -105,9 +105,9 @@
 }
 
 @media (max-width: 480px) {
-  .contentList__container img {
+  /* .contentList__container img {
     width: 410px;
-  }
+  } */
   .contentList__subWrapper {
     grid-template-columns: 1fr;
   }

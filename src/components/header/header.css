@@ -61,7 +61,7 @@
 .nav-bar {
   height: 100%;
   width: 50%;
-  position: absolute;
+  position: fixed;
   top: 105px;
   right: -51%;
   border-left: 1px solid darkgray;
@@ -122,7 +122,7 @@ a {
   .nav-bar {
     width: 60%;
     height: inherit;
-    position: relative;
+    position: fixed;
     top: 0;
     right: 0;
     display: flex;

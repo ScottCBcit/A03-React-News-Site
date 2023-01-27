@@ -4,8 +4,8 @@ export const Footer = () => {
   return (
     <>
     <div className="footer-container">
-      <div class="footer-inside">
-        <div class="footerColumn account">
+      <div className="footer-inside">
+        <div className="footerColumn account">
           <h3>My Account</h3>
           <br></br>
           <a href="#"><p>Profile</p></a>
@@ -13,7 +13,7 @@ export const Footer = () => {
           <a href="#"><p>Newsletters</p></a>
           <a href="#"><p>About CBC Accounts</p></a>
         </div>
-        <div class="footerColumn connect">
+        <div className="footerColumn connect">
           <h3>Connect With CBC</h3>
           <br></br>
           <a href="#"><p>Facebook</p></a>
@@ -24,7 +24,7 @@ export const Footer = () => {
           <a href="#"><p>RSS</p></a>
           <a href="#"><p>Podcasts</p></a>
         </div>
-        <div class="footerColumn contact">
+        <div className="footerColumn contact">
           <h3>Contact CBC</h3>
           <br></br>
           <a href="#"><p>Submit FeedBack</p></a>
@@ -40,7 +40,7 @@ export const Footer = () => {
             <br></br>
              1-866-306-4636</p>
           </div>
-          <div class="footerColumn about">
+          <div className="footerColumn about">
           <h3>About CBC</h3>
           <br></br>
           <a href="#"><p>Corporate Info</p></a>
@@ -54,7 +54,7 @@ export const Footer = () => {
           <a href="#"><p>Political Ads Registry</p></a> 
           <a href="#"><p>AdChoices</p></a> 
           </div>
-          <div class="footerColumn services">
+          <div className="footerColumn services">
           <h3>Services</h3>
           <br></br>
           <a href="#"><p>Ombudsman</p></a>
@@ -65,7 +65,7 @@ export const Footer = () => {
           <a href="#"><p>Renting Facilities</p></a>
           <a href="#"><p>Radio Canada International</p></a>
           </div> 
-          <div class="footerColumn services">
+          <div className="footerColumn services">
           <h3>Accessibility</h3>
           <br></br>
           <p>It is a priority for CBC to 
