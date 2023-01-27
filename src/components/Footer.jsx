@@ -39,16 +39,16 @@ export const Footer = () => {
           <a href="#"><p>Submit FeedBack</p></a>
           <a href="#"><p>Help Center</p></a>
           {/*br's are there to mimic what CBC had */}
-          <p>Audience Relations, CBC
+          <p>Audience Support, BCIT Daily
             <br></br>
-             P.O. Box 500 Station A
+            555 Seymour St, 
              <br></br>
-             Toronto, ON
+             Vancouver, BC
              <br></br>
-             Canada, M5W 1E6</p>
+             Canada, V6B 3H6</p>
           <p>Toll-free (Canada only):
             <br></br>
-             1-866-306-4636</p>
+             1-250-000-0960</p>
           </div>
           {/*Grid Column for about*/}
           <div className="footerColumn about">
