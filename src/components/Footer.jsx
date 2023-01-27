@@ -5,9 +5,9 @@ export const Footer = () => {
     <>   {/*Footer Container / wrapper */}
       <div className="footer-container">
         {/*footer inside (used for grid)*/}
-        <div class="footer-inside">
+        <div className="footer-inside">
           {/*Grid Column for Account*/}
-          <div class="footerColumn account">
+          <div className="footerColumn account">
             {/*Account heading*/}
             <h3>My Account</h3>
             <br></br>
@@ -18,7 +18,7 @@ export const Footer = () => {
             <a href="#"><p>About BCIT Daily Accounts</p></a>
           </div>
           {/*Grid Column for connect*/}
-          <div class="footerColumn connect">
+          <div className="footerColumn connect">
             {/*Connect heading*/}
             <h3>Connect @ BCIT Daily</h3>
             <br></br>
@@ -30,7 +30,7 @@ export const Footer = () => {
             <a href="#"><p>Podcasts</p></a>
           </div>
           {/*Grid Column for contact*/}
-          <div class="footerColumn contact">
+          <div className="footerColumn contact">
             {/*Contact heading*/}
             <h3>Contact BCIT Daily</h3>
             <br></br>
@@ -51,7 +51,7 @@ export const Footer = () => {
               1-866-306-4636</p>
           </div>
           {/*Grid Column for about*/}
-          <div class="footerColumn about">
+          <div className="footerColumn about">
             {/*About heading*/}
             <h3>About BCIT Daily</h3>
             <br></br>
@@ -64,7 +64,7 @@ export const Footer = () => {
             <a href="#"><p>Political Ads Registry</p></a>
           </div>
           {/*Grid Column for services*/}
-          <div class="footerColumn services">
+          <div className="footerColumn services">
             {/*Services heading*/}
             <h3>Services</h3>
             <br></br>
@@ -77,7 +77,7 @@ export const Footer = () => {
             <a href="#"><p>Radio Canada International</p></a>
           </div>
           {/*Grid Column for Accessibility*/}
-          <div class="footerColumn services">
+          <div className="footerColumn services">
             {/*Accessibility heading*/}
             <h3>Accessibility</h3>
             <br></br>
@@ -95,7 +95,11 @@ export const Footer = () => {
             <a href="#"><p>About BCIT Daily Accessibility</p></a>
             <a href="#"><p>Accessibility Feedback</p></a>
           </div>
-
+        </div>
+        <div className="footer-banner">
+          <footer>
+            <p>© 2023 Scott | Renz | Brayden | Mason</p>
+          </footer>
         </div>
 
       </div>
