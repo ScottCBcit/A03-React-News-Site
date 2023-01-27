@@ -1,0 +1,52 @@
+{
+    "articles": [
+        {
+            "title": "Devastating Earthquake Rocks Urban Area",
+            "author": "John Smith",
+            "date": "2023-01-28",
+            "content": "A powerful earthquake measuring 7.5 on the Richter scale struck a major urban area early this morning, causing widespread damage and leaving thousands of residents displaced. Emergency services have been working around the clock to rescue those trapped in the rubble and provide assistance to those affected. The extent of the damage is still being assessed, but initial reports suggest that it is extensive.",
+            "image": "/earthquakeDamage.jpg",
+            "alt":"earthquake damage"
+        },
+        {
+            "title": "President Wins Re-Election in Contested Race",
+            "author": "Jane Doe",
+            "date": "2023-01-25",
+            "content": "The results of the presidential election have been revealed, with the incumbent candidate emerging victorious. The race was highly contested, with both candidates receiving strong support from their respective parties. The incumbent's campaign focused on their record of economic growth and job creation, while their opponent campaigned on a platform of social and political reform.",
+            "image": "/electionBallot.jpg",
+            "alt":"election ballot"
+        },
+        {
+            "title": "Breakthrough Cancer Treatment Shows Positive Results",
+            "author": "Michael Johnson",
+            "date": "2023-01-24",
+            "content": "A new treatment for cancer is showing promising results in clinical trials. The treatment, which targets specific genetic mutations found in cancer cells, has been found to effectively shrink tumors and slow the progression of the disease. The treatment is still in the early stages of development, but the results so far are encouraging and researchers hope that it will become a viable option for patients in the near future.",
+            "image": "/cancerTreatment.jpg",
+            "alt":"cancer treatment"
+        },
+        {
+            "title": "Nation Enters Economic Recession, Government Unveils Plan to Combat It",
+            "author": "Emily Davis",
+            "date": "2023-01-22",
+            "content": "An official declaration of economic recession has been made by the government, citing a significant decline in economic activity in recent months. The government has announced a large stimulus package aimed at boosting the economy and providing assistance to those affected. The package includes measures such as increased government spending on infrastructure projects, tax cuts for businesses, and increased aid for individuals and families.",
+            "image": "/economicRecession.jpg",
+            "alt":"economic recession"
+        },
+        {
+            "title": "Heatwave breaks Records across the Nation",
+            "author": "David Brown",
+            "date": "2023-01-20",
+            "content": "A record-breaking heatwave is sweeping across the country, with temperatures soaring to unprecedented levels. The heatwave, which began last week, has brought with it high humidity and a lack of rainfall, making it difficult for residents to stay cool. Many cities have opened cooling centers and are urging residents to take precautions to avoid heat-related illnesses.",
+            "image": "/heatwave.jpg",
+            "alt":"heatwave"
+        },
+        {
+            "title": "Astronomers Make Groundbreaking Discovery in Space",
+            "author": "Jessica Wilson",
+            "date": "2023-01-18",
+            "content": "Scientists have made a groundbreaking discovery in space that is set to change our understanding of the universe. The discovery, which was made using a powerful new telescope, reveals previously unseen details about a distant galaxy and its inhabitants. The findings are expected to have a major impact on the field of astronomy and will likely lead to further discoveries in the future.",
+            "image": "/astronomers.jpg",
+            "alt":"astronomers"
+        }
+    ]
+}
