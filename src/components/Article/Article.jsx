@@ -1,25 +1,36 @@
 import React from "react";
 import styles from "./article.module.css";
 import ArticleContent from "./ArticleContent.json";
+import { Link } from "react-router-dom";
 
 function Article() {
+
+
 
   return (
     <section className={styles.articlesSection}>
       {ArticleContent.articles.map((content, idx) => (
-        <div className={styles.container} key={idx}>
+        // <div key={idx}>
+          <Link key={idx} className={styles.container}  to={'#'}>
           <img
             src={`./article/${content.image}`}
             alt={content.alt}
             className={styles.articleImage}
           />
-          <h3 className={styles.title}>{content.title}</h3>
+          
+          <h3  className={styles.title}>{content.title}</h3>
+          
           <div className={styles.authorAndDate}>
-            {content.author}
-            <time className={`${styles.authorAndDate}`}>{content.date}</time>
+            <p>{content.author}</p>
+            <time>{content.date}</time>
           </div>
-            <p className={styles.article}>{content.content}</p>
-        </div>
+          <div  className={styles.article}>
+              <p>{content.content}</p>
+              <i className={styles.arrow}></i>
+          </div>
+          </Link>
+            
+        // </div>
       ))}
     </section>
   );

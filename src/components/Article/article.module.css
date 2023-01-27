@@ -9,6 +9,12 @@ Used for styling how the section of articles sits on the page
     /* height: 100%;
     width: 100%; */
     width: 320px;
+    max-width: 1000px;
+    /* padding: 0.5rem 0 0.5rem 0; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
 }
 
 
@@ -17,23 +23,31 @@ Start of Article Module Styles
 */
 
 .container { 
-    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.5fr 0.5fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.85fr 0.25fr 0.25fr 0.5fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "articleImage articleImage articleImage articleImage"
     "articleImage articleImage articleImage articleImage"
     "authorAndDate authorAndDate authorAndDate authorAndDate"
     "title title title title"
     "article article article article"
     "article article article article";
-    /* border-top: 2px solid rgba(0,0,0,0.5); */
-    border: 1px solid #e0e0e0;
+    border-top: 3px solid #e0e0e0;
+    /* border: 3px solid #e0e0e0; */
     padding: 1rem;
     margin: 1rem 0 0 0;
+    color: rgba(0,0,0);
+    
+}
+
+.container:hover {
+  border: 3px solid rgb(255, 85, 84, 0.8);
+  color: rgba(0,0,0,0.75);
+}
+.container:hover .arrow{
+    visibility: visible;
 }
 
 
@@ -52,6 +66,7 @@ Start of Article Module Styles
     object-fit: cover;
     height: auto;
     max-width: 600px;
+    box-shadow: 1px 0 3px #888888;
 }
 
 /**/
@@ -59,24 +74,155 @@ Start of Article Module Styles
 .authorAndDate { 
     grid-area: authorAndDate; 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;}
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 1rem 0 0 0;
+}
+.authorAndDate :first-child{
+    padding: 0 0 1rem 0;
+    margin: 0;
+}
 
 /**/
 
 .title { 
     grid-area: title;
     margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 /**/
 
 .article { 
     grid-area: article; 
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    align-items: flex-end;
+    font-size: 1rem;
 }
 
 /*End of Article Module Styles*/
 
+.arrow {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px;
+    visibility: hidden;
+    color: rgb(255, 85, 84, 0.8);
+    
+   }
+   
+   .arrow::after,
+   .arrow::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 4px;
+   }
+   
+   .arrow::after {
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    bottom: 6px;
+   }
+   
+   .arrow::before {
+    width: 10px;
+    height: 2px;
+    bottom: 8px;
+    background: currentColor;
+   } 
+
+
 /*Media Queries*/
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+    .articlesSection{
+        width: 100%;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "articleImage"
+        "articleImage"
+        "authorAndDate"
+        "title"
+        "article"
+        "article";
+    }
+
+    .articleImage {
+        width: 100%;
+    }
+
+    .authorAndDate {
+        flex-direction: column;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .articlesSection{
+        width: 100%;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.5fr;
+        grid-template-areas:
+        "articleImage articleImage"
+        "articleImage articleImage"
+        "authorAndDate authorAndDate"
+        "title title"
+        "article article";
+    }
+
+    .articleImage {
+        width: 100%;
+    }
+    .authorAndDate {
+        justify-content: space-between;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 660px) {
+
+    .articlesSection{
+        width: 100%;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.25fr;
+        grid-template-areas:
+        "articleImage articleImage articleImage title"
+        "articleImage articleImage articleImage title"
+        "authorAndDate authorAndDate authorAndDate authorAndDate"
+        "article article article article";
+    }
+    .title {
+        justify-self: center;
+        align-self: center;
+        padding: 0 0 0 1rem;
+
+    }
+    .articleImage {
+        width: 100%;
+    }
+    .authorAndDate {
+        justify-content: space-between;
+    }
+}
