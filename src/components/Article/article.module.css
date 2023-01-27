@@ -1,66 +1,82 @@
+/*
+Start of Articles Section Styles
 
+Used for styling how the section of articles sits on the page
+ not the articles themselves
+*/
 
-/* .articleWrapper h3{
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
+.articlesSection{
+    /* height: 100%;
+    width: 100%; */
+    width: 320px;
 }
 
-.articleWrapper p  {
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-}
 
-.articleWrapper img{
-    max-width: 600px;
-    height: auto;
-}
-
-.author{
-    margin: 0 0 1rem 1rem;
-}
-.articleWrapper time{
-    
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-} */
-
-
-/* <img src={`./article/${content.image}`} 
-        alt={content.alt} 
-        className={styles.image}/> */
-
-
+/*
+Start of Article Module Styles
+*/
 
 .container { 
-     display: grid;
+    
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.5fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "AuthorAndDate ArticleImage ArticleImage ArticleImage"
-    "AuthorAndDate ArticleImage ArticleImage ArticleImage"
-    "AuthorAndDate ArticleImage ArticleImage ArticleImage"
-    "Title Title Title Title"
-    "Article Article Article Article"
-    "Article Article Article Article";
+    "articleImage articleImage articleImage articleImage"
+    "articleImage articleImage articleImage articleImage"
+    "authorAndDate authorAndDate authorAndDate authorAndDate"
+    "title title title title"
+    "article article article article"
+    "article article article article";
+    /* border-top: 2px solid rgba(0,0,0,0.5); */
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
 }
 
-.container img{
-    max-width: 600px;
+
+/**/
+
+.container:last-child {
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    
+}
+
+/**/
+
+.articleImage { 
+    grid-area: articleImage; 
+    width: 100%;
+    object-fit: cover;
     height: auto;
+    max-width: 600px;
 }
 
-.ArticleImage { grid-area: ArticleImage; }
+/**/
 
-.AuthorAndDate { grid-area: AuthorAndDate; }
+.authorAndDate { 
+    grid-area: authorAndDate; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;}
 
-.Title { grid-area: Title; }
+/**/
 
-.Article { grid-area: Article; }
+.title { 
+    grid-area: title;
+    margin: 0;
+}
+
+/**/
+
+.article { 
+    grid-area: article; 
+    margin: 0;
+}
+
+/*End of Article Module Styles*/
+
+/*Media Queries*/

@@ -1,19 +1,26 @@
 import React from "react";
 import styles from "./article.module.css";
-export const Article = ({ content }) => {
+import ArticleContent from "./ArticleContent.json";
+
+export const Article = () => {
+  console.log(ArticleContent.articles);
   return (
-    <div className={`${styles.container}`}>
-      <img
-        src={`./article/${content.image}`}
-        alt={content.alt}
-        className={`${styles.ArticleImage}`}
-      />
-      <h3 className={`${styles.Title}`}>{content.title}</h3>
-      <div className={`${styles.author} ${styles.AuthorAndDate}`}>
-        {content.author}
-        <time className={`${styles.AuthorAndDate}`}>{content.date}</time>
-      </div>
-      <p className={`${styles.Article}`}>{content.content}</p>
-    </div>
+    <section className={styles.articlesSection}>
+      {ArticleContent.articles.map((content, idx) => (
+        <div className={styles.container} key={idx}>
+          <img
+            src={`./article/${content.image}`}
+            alt={content.alt}
+            className={styles.articleImage}
+          />
+          <h3 className={styles.title}>{content.title}</h3>
+          <div className={styles.authorAndDate}>
+            {content.author}
+            <time className={`${styles.authorAndDate}`}>{content.date}</time>
+          </div>
+          <p className={styles.article}>{content.content}</p>
+        </div>
+      ))}
+    </section>
   );
 };
