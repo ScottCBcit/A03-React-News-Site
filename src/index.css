@@ -20,7 +20,12 @@ a {
   color: black;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
+.index-wrapper {
+  margin-top: 75px;
+}
+
+@media (min-width: 760px) {
+  .index-wrapper {
+    margin-top: 100px;
+  }
 }
