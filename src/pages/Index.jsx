@@ -5,7 +5,6 @@ export const Index = () => {
     return (
         <>
             <div className="index-wrapper">
-                <h1>Hello World</h1>
                 <ContentList />
             </div>
         </>

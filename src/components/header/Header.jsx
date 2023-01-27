@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <>
       <div className="header">
-        <div>
+        <div className="logo-link">
           <Link to="/">
             <img className="logo" src={logo} alt="BCIT Daily logo"/>
           </Link>
