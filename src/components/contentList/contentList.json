@@ -1,0 +1,58 @@
+{
+  "articles": [
+    {
+      "title": "Transport minister didn't speak to Via Rail during holiday travel chaos",
+      "author": "Jane Smith",
+      "createdAt": "2023-01-01",
+      "image": "https://i.cbc.ca/1.6710598.1673474713!/fileImage/httpImage/image.jpeg_gen/derivatives/16x9_300/via-breakdown.jpeg"
+    },
+    {
+      "title": "OPP arrest Renfrew Country homicide suspect",
+      "author": "John Doe",
+      "createdAt": "2023-01-08",
+      "image": "https://i.cbc.ca/1.5051252.1641212128!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_300/opp-generic-police-cruiser-officers-car-ontario.jpg"
+    },
+    {
+      "title": "Time to reopen Wellington Street to vehicles, city committee says",
+      "author": "Emma Williams",
+      "createdAt": "2023-01-11",
+      "image": "https://i.cbc.ca/1.6726808.1674748115!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_300/wellington-street-barricades-reopening-parliament-hill-ottawa-barrier.JPG"
+    },
+    {
+      "title": "Average rent for new tenants went up more than 18% last year, CMHC says",
+      "author": "Michael Brown",
+      "createdAt": "2023-01-04",
+      "image": "https://i.cbc.ca/1.6726823.1674748706!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_300/rental-housing.jpg"
+    },
+    {
+      "title": "The COVID emergency might end after 3 long years - but the virus is still a threat",
+      "author": "Emily Davis",
+      "createdAt": "2023-03-05",
+      "image": "https://i.cbc.ca/1.5495785.1584044545!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/dr-allison-mcgeer.jpg"
+    },
+    {
+      "title": "Hulu drops Rick and Morty co-creator after abuse charges",
+      "author": "David Johnson",
+      "createdAt": "2023-01-26",
+      "image":"https://i.cbc.ca/1.6724868.1674600669!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_300/174363931.jpg"
+    },
+    {
+      "title": "Russia launches attack on Ukrainian ships in Black Sea",
+      "author": "David Johnson",
+      "createdAt": "2023-02-06",
+      "image":"https://i.cbc.ca/1.6726822.1674748969!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_300/ukraine-crisis-attacks-kyiv-region.JPG"
+    },
+    {
+      "title": "Canada to send 4 combat-ready Leopard 2 tanks to Ukraine in the coming weeks",
+      "author": "David Kim",
+      "createdAt": "2023-02-07",
+      "image": "https://i.cbc.ca/1.6727166.1674760713!/fileImage/httpImage/image.JPG_gen/derivatives/16x9_780/cda-ukraine-20230126.JPG"
+    },
+    {
+      "title": "Leamington, Ont., farmers crack the mystery of the giant egg",
+      "author": "David Jone",
+      "createdAt": "2023-02-12",
+      "image":"https://i.cbc.ca/1.6725976.1674678708!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_300/big-egg-reveal.jpg"
+    }
+]
+}
