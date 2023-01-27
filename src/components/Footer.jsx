@@ -46,7 +46,7 @@ export const Footer = () => {
              Vancouver, BC
              <br></br>
              Canada, V6B 3H6</p>
-          <p>Toll-free (Canada only):
+          <p>Telephone (Canada only):
             <br></br>
              1-250-000-0960</p>
           </div>
