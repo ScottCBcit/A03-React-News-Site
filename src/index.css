@@ -30,3 +30,13 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.index-wrapper {
+  margin-top: 75px;
+}
+
+@media (min-width: 760px) {
+  .index-wrapper {
+    margin-top: 100px;
+  }
+}
