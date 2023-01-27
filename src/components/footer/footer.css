@@ -21,7 +21,6 @@ This is set to cover the page instead of a smaller grid exactly like CBC.*/
   justify-content: center;
   grid-template-columns: 16% 16% 16% 16% 16% 16%;
   text-align: start;
-  height: 175px;
   font-size: 10px;
   padding: 20px 10px 10px 10px;
 }
@@ -48,15 +47,10 @@ the p tag with an anchor tag to get the blue text and removed text-decorations*/
   color: blue;
 }
 
-footer {
-  display: grid;
-  grid-template-columns: 1fr;
+.footer-banner {
   background-color: black;
   color: white;
-  height: auto;
-
-  margin-top: 15%;
-  justify-content: center;
+  width: 100%;
   text-align: center;
   padding: 20px;
 }

@@ -95,7 +95,11 @@ export const Footer = () => {
             <a href="#"><p>About BCIT Daily Accessibility</p></a>
             <a href="#"><p>Accessibility Feedback</p></a>
           </div>
-
+        </div>
+        <div className="footer-banner">
+          <footer>
+            <p>© 2023 Scott | Renz | Brayden | Mason</p>
+          </footer>
         </div>
 
       </div>
