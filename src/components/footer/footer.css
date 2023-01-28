@@ -13,6 +13,9 @@
 
 /*Setting up grid for items - border-top set to grey to mimic CBC
 This is set to cover the page instead of a smaller grid exactly like CBC.*/
+
+/* Took it out position:relative since the border top gets empty space on the end of left side on desktop screen &
+footer section move left and right on mobile screen */
 .footer-inside {
   display: grid;
   border-top: 1px grey solid;
