@@ -25,7 +25,7 @@ footer section move left and right on mobile screen */
   grid-template-columns: 16% 16% 16% 16% 16% 16%;
   text-align: start;
   font-size: 10px;
-  padding: 20px 10px 10px 10px;
+  padding: 20px 10px;
 }
 
 /* Footer h3 is to be medium font-size */
@@ -62,21 +62,25 @@ footer {
   padding: 20px;
 }
 
+/* Each screen size the padding needs to be changed due to avoid narrow space each font and content & keep neat text align */
 /* making the footer grid responsive at 1100 px - */
 @media (max-width: 1100px) {
   .footer-inside {
     grid-template-columns: repeat(3, 1fr);
+    padding: 20px 80px;
   }
 }
 /* making the footer grid responsive at 510 px - */
-@media (max-width: 510px) {
+@media (max-width: 760px) {
   .footer-inside {
     grid-template-columns: repeat(2, 1fr);
+    padding: 20px 40px;
   }
 }
 /* making the footer grid responsive at 350 px - */
 @media (max-width: 350px) {
   .footer-inside {
     grid-template-columns: repeat(1, 1fr);
+    padding: 20px 20px;
   }
 }
