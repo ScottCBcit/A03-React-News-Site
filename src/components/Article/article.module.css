@@ -6,17 +6,28 @@ Used for styling how the section of articles sits on the page
 */
 
 .articlesSection{
-    /* height: 100%;
-    width: 100%; */
     width: 320px;
-    max-width: 1000px;
-    /* padding: 0.5rem 0 0.5rem 0; */
+    
     padding: 1rem;
+    margin: 0 0 1rem 0;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 2px solid rgba(0,0,0,0.5); */
 }
 
+.articlesSection > :first-child {
+    padding: 75px 0 0 0;
+}
+
+
+.heading {
+    max-width: 1000px;
+    width: 100%;
+    font-size: 2rem;
+    padding: 75px 0 0 ;
+}
 
 /*
 Start of Article Module Styles
@@ -34,12 +45,12 @@ Start of Article Module Styles
     "title title title title"
     "article article article article"
     "article article article article";
-    border-top: 3px solid #e0e0e0;
-    /* border: 3px solid #e0e0e0; */
-    padding: 1rem;
-    margin: 1rem 0 0 0;
+    border: 3px solid #ffffff;
+    max-width: 1000px;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 1rem 0 1rem 0;
     color: rgba(0,0,0);
-    
+    transition: 0.75s;
 }
 
 .container:hover {
@@ -50,21 +61,19 @@ Start of Article Module Styles
     visibility: visible;
 }
 
-
-/**/
-
-.container:last-child {
-    border-bottom: 2px solid rgba(0,0,0,0.5);
-    
+.lineSeparator {
+    display:block;
+    width:70%;
+    border-top: 3px solid #e0e0e0;
 }
 
-/**/
+
 
 .articleImage { 
     grid-area: articleImage; 
     width: 100%;
-    object-fit: cover;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     max-width: 600px;
     box-shadow: 1px 0 3px #888888;
 }
@@ -81,6 +90,9 @@ Start of Article Module Styles
 .authorAndDate :first-child{
     padding: 0 0 1rem 0;
     margin: 0;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 /**/
@@ -104,6 +116,9 @@ Start of Article Module Styles
 }
 
 /*End of Article Module Styles*/
+
+
+/* Start of Arrow Icon Styles */
 
 .arrow {
     box-sizing: border-box;
@@ -154,7 +169,7 @@ Start of Article Module Styles
     }
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.5fr 0.5fr;
+        grid-template-rows: 0.7fr 0fr 0.25fr 0.25fr 0.5fr 0.5fr;
         grid-template-areas:
         "articleImage"
         "articleImage"
@@ -165,11 +180,14 @@ Start of Article Module Styles
     }
 
     .articleImage {
-        width: 100%;
+        box-shadow: none;
     }
 
     .authorAndDate {
         flex-direction: column;
+    }
+    .arrow{
+        visibility: visible;
     }
 }
 
@@ -199,18 +217,17 @@ Start of Article Module Styles
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 660px) {
+@media only screen and (min-width: 600px) {
 
     .articlesSection{
         width: 100%;
     }
     .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.25fr;
+        grid-template-rows: 1fr 0.25fr 0.25fr;
         grid-template-areas:
         "articleImage articleImage articleImage title"
-        "articleImage articleImage articleImage title"
-        "authorAndDate authorAndDate authorAndDate authorAndDate"
+        "articleImage articleImage articleImage authorAndDate"
         "article article article article";
     }
     .title {
@@ -223,6 +240,43 @@ Start of Article Module Styles
         width: 100%;
     }
     .authorAndDate {
+        flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+    }
+    .article{
+        padding: 2rem 0 0 0;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+    .article {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .first  {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr 0.25fr 0.25fr 0.25fr;
+        grid-template-areas:
+        "title title title title"
+        "articleImage articleImage articleImage authorAndDate"
+        "articleImage articleImage articleImage authorAndDate"
+        "article article article article";
+    }
+
+    .container:nth-child(2n + 2) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.25fr 0.25fr;
+        grid-template-areas:
+        "title articleImage articleImage articleImage"
+        "authorAndDate articleImage articleImage articleImage"
+        "article article article article";
+    }
+    .title {
+        padding: 0 1rem 0 0;
     }
 }
