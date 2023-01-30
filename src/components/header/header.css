@@ -157,3 +157,10 @@ a {
     text-align: center;
   }
 }
+
+/* If you don't like shrink the logo size when it comes to mobile screen, feel free to take it out */
+@media (max-width: 480px) {
+  .logo-link a img {
+    width: 80px;
+  }
+}

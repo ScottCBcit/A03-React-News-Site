@@ -8,6 +8,7 @@ export const Index = () => {
             <div className="index-wrapper">
                 <Article />
                 <ContentList />
+
             </div>
         </>
     )
