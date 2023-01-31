@@ -45,30 +45,27 @@ Start of Article Module Styles
     "title title title title"
     "article article article article"
     "article article article article";
-    border: 3px solid #ffffff;
+    border: 3px solid var(--white);
     max-width: 1000px;
     padding: 1rem 1rem 2rem 1rem;
     margin: 1rem 0 1rem 0;
-    color: rgba(0,0,0);
+    color: var(--black);
     transition: 0.75s;
 }
 
 .container:hover {
-  border: 3px solid rgb(255, 85, 84, 0.8);
-  color: rgba(0,0,0,0.75);
+  border: 3px solid var(--red);
+  color: var(--black);
 }
 .container:hover .arrow{
     visibility: visible;
 }
 
-
-.lineSeparator {
+/* .lineSeparator {
     display:block;
     width:70%;
     border-top: 3px solid #e0e0e0;
-}
-
-
+} */
 
 .articleImage { 
     grid-area: articleImage; 
@@ -76,7 +73,7 @@ Start of Article Module Styles
     height: 100%;
     object-fit: contain;
     max-width: 600px;
-    box-shadow: 1px 0 3px #888888;
+    box-shadow: 1px 0 3px var(--grey);
 }
 
 /**/
@@ -131,7 +128,7 @@ Start of Article Module Styles
     transform: scale(var(--ggs,1));
     border-radius: 4px;
     visibility: hidden;
-    color: rgb(255, 85, 84, 0.8);
+    color: var(--red);
     
    }
    
