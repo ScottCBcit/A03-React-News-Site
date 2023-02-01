@@ -45,29 +45,27 @@ Start of Article Module Styles
     "title title title title"
     "article article article article"
     "article article article article";
-    border: 3px solid #ffffff;
+    border: 3px solid var(--white);
     max-width: 1000px;
     padding: 1rem 1rem 2rem 1rem;
     margin: 1rem 0 1rem 0;
-    color: rgba(0,0,0);
+    color: var(--black);
     transition: 0.75s;
 }
 
 .container:hover {
-  border: 3px solid rgb(255, 85, 84, 0.8);
-  color: rgba(0,0,0,0.75);
+  border: 3px solid var(--red);
+  color: var(--black);
 }
 .container:hover .arrow{
     visibility: visible;
 }
 
-.lineSeparator {
+/* .lineSeparator {
     display:block;
     width:70%;
     border-top: 3px solid #e0e0e0;
-}
-
-
+} */
 
 .articleImage { 
     grid-area: articleImage; 
@@ -75,7 +73,7 @@ Start of Article Module Styles
     height: 100%;
     object-fit: contain;
     max-width: 600px;
-    box-shadow: 1px 0 3px #888888;
+    box-shadow: 1px 0 3px var(--grey);
 }
 
 /**/
@@ -130,7 +128,7 @@ Start of Article Module Styles
     transform: scale(var(--ggs,1));
     border-radius: 4px;
     visibility: hidden;
-    color: rgb(255, 85, 84, 0.8);
+    color: var(--red);
     
    }
    
@@ -242,7 +240,7 @@ Start of Article Module Styles
     .authorAndDate {
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
     .article{
         padding: 2rem 0 0 0;
@@ -258,14 +256,23 @@ Start of Article Module Styles
 
 @media only screen and (min-width: 1000px) {
 
-    .first  {
+    .container:first-of-type:Link  {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.25fr 1fr 0.25fr 0.25fr 0.25fr;
+        grid-template-rows: 0.25fr 1fr 0.25fr 0.15fr 0.25fr;
         grid-template-areas:
         "title title title title"
-        "articleImage articleImage articleImage authorAndDate"
-        "articleImage articleImage articleImage authorAndDate"
+        "articleImage articleImage articleImage articleImage"
+        "articleImage articleImage articleImage articleImage"
+        "authorAndDate authorAndDate authorAndDate authorAndDate"
         "article article article article";
+    }
+    .container:first-of-type:Link .articleImage {
+        object-fit: contain;
+        max-width: 1000px;
+    }
+
+    .container:first-of-type:Link .authorAndDate {
+        flex-direction: row;
     }
 
     .container:nth-child(2n + 2) {
@@ -276,6 +283,11 @@ Start of Article Module Styles
         "authorAndDate articleImage articleImage articleImage"
         "article article article article";
     }
+
+    .authorAndDate:nth-child(2n) {
+        align-items: flex-end;
+    }
+
     .title {
         padding: 0 1rem 0 0;
     }

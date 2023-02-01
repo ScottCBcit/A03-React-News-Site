@@ -9,6 +9,7 @@ once we set upt root color we should stick with the color we have in root variab
   --lightgrey: #cbcbcb;
   --red: rgb(255, 85, 84, 0.8);
   --black: hwb(0 13% 87%);
+  --grey: #888888;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Stag Medium, Trebuchet;
-  width: 100vw;
+  width: 100%;
 }
 /*  
 
