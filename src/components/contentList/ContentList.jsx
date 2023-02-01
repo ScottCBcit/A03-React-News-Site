@@ -17,9 +17,9 @@ function ContentList() {
       </div>
       <div className={styles.contentList__subWrapper}>
         {contentLists.map((contentList, idx) => (
-          <div className={styles.contentList__container} key={idx}>
+          <div className={styles.contentList__container} key={idx} title="news">
             <Link to={''}>
-              <img src={contentList.image} alt={contentList.title} />
+              <img src={contentList.image} alt={contentList.title} title="article-img" />
               <h2>{contentList.title}</h2>
               <h3>{contentList.author}</h3>
               <p>{contentList.createdAt}

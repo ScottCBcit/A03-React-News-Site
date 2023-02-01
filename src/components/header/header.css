@@ -6,6 +6,10 @@
   background-color: white;
 }
 
+.logo {
+  height: 100%;
+}
+
 /* logo styling */
 .logo-link {
   width: 75px;
