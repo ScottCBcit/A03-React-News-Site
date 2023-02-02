@@ -1,27 +1,25 @@
+
+/* Colors defined in root variables */
+
 /*
 Start of Articles Section Styles
-
-Used for styling how the section of articles sits on the page
- not the articles themselves
 */
 
 .articlesSection{
     width: 320px;
-    
     padding: 1rem;
     margin: 0 0 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border-bottom: 2px solid rgba(0,0,0,0.5); */
 }
-
+/* First Child of Articles Section */
 .articlesSection > :first-child {
     padding: 75px 0 0 0;
 }
 
-
+/* Top News heading of articles section */
 .heading {
     max-width: 1000px;
     width: 100%;
@@ -32,13 +30,14 @@ Used for styling how the section of articles sits on the page
 /*
 Start of Article Module Styles
 */
-
 .container { 
     display: grid;
+    /* 4 columns 5 rows */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.85fr 0.25fr 0.25fr 0.5fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
+    /* Default Grid Layout but most likely will be altered in the media queries*/
     grid-template-areas:
     "articleImage articleImage articleImage articleImage"
     "authorAndDate authorAndDate authorAndDate authorAndDate"
@@ -53,6 +52,8 @@ Start of Article Module Styles
     transition: 0.75s;
 }
 
+
+/* On hover for individual article */
 .container:hover {
   border: 3px solid var(--red);
   color: var(--black);
@@ -60,13 +61,9 @@ Start of Article Module Styles
 .container:hover .arrow{
     visibility: visible;
 }
+/* End of article hover */
 
-/* .lineSeparator {
-    display:block;
-    width:70%;
-    border-top: 3px solid #e0e0e0;
-} */
-
+/* Initial styles for Article Elements */
 .articleImage { 
     grid-area: articleImage; 
     width: 100%;
@@ -93,6 +90,10 @@ Start of Article Module Styles
     font-size: 1em;
 }
 
+p:first-of-type + time{
+    font-weight: 700;
+}
+
 /**/
 
 .title { 
@@ -112,50 +113,50 @@ Start of Article Module Styles
     align-items: flex-end;
     font-size: 1rem;
 }
+/* End of intial styles */
 
 /*End of Article Module Styles*/
 
 
 /* Start of Arrow Icon Styles */
 
-.arrow {
+
+/* Icon from https://css.gg/arrow-right */
+   .arrow {
     box-sizing: border-box;
     position: relative;
     display: block;
+    transform: scale(var(--ggs,1.5));
     width: 22px;
     height: 22px;
-    border: 2px solid;
-    transform: scale(var(--ggs,1));
-    border-radius: 4px;
     visibility: hidden;
     color: var(--red);
-    
-   }
-   
-   .arrow::after,
-   .arrow::before {
+    padding: 0 1rem 0 0;
+
+}
+.arrow::after,
+.arrow::before {
     content: "";
     display: block;
     box-sizing: border-box;
     position: absolute;
-    right: 4px;
-   }
-   
-   .arrow::after {
-    width: 6px;
-    height: 6px;
+    right: 3px
+}
+.arrow::after {
+    width: 8px;
+    height: 8px;
     border-top: 2px solid;
     border-right: 2px solid;
     transform: rotate(45deg);
-    bottom: 6px;
-   }
-   
-   .arrow::before {
-    width: 10px;
+    bottom: 7px
+}
+.arrow::before {
+    width: 16px;
     height: 2px;
-    bottom: 8px;
-    background: currentColor;
-   } 
+    bottom: 10px;
+    background: currentColor
+}
+
 
 
 /*Media Queries*/
@@ -165,6 +166,8 @@ Start of Article Module Styles
     .articlesSection{
         width: 100%;
     }
+
+    /* Single Column Layout */
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: 0.7fr 0fr 0.25fr 0.25fr 0.5fr 0.5fr;
@@ -176,14 +179,15 @@ Start of Article Module Styles
         "article"
         "article";
     }
-
     .articleImage {
         box-shadow: none;
     }
-
+        /* switching author and date element direction */
     .authorAndDate {
         flex-direction: column;
     }
+
+    /* arrow visible without hovering for mobile */
     .arrow{
         visibility: visible;
     }
@@ -194,10 +198,10 @@ Start of Article Module Styles
     .articlesSection{
         width: 100%;
     }
-
+    /* two column layout */
     .container {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0fr 0.25fr 0.25fr 0.5fr;
+        grid-template-rows: 1fr 0.25fr 0.25fr 0.5fr;
         grid-template-areas:
         "articleImage articleImage"
         "articleImage articleImage"
@@ -209,17 +213,25 @@ Start of Article Module Styles
     .articleImage {
         width: 100%;
     }
+
+    /* larger screen so space is added to author and date 
+    as well as it is now flex-direction row */
     .authorAndDate {
         justify-content: space-between;
     }
 }
 
-/* Desktop Styles */
+/* Changes layour at screen min-width 600px
+ Article grid has 3 rows and 4 columns
+
+*/
 @media only screen and (min-width: 600px) {
 
     .articlesSection{
         width: 100%;
     }
+
+    /* 4 column layout */
     .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 0.25fr 0.25fr;
@@ -228,6 +240,7 @@ Start of Article Module Styles
         "articleImage articleImage articleImage authorAndDate"
         "article article article article";
     }
+    /* padding added to the left to push away from image */
     .title {
         justify-self: center;
         align-self: center;
@@ -237,25 +250,35 @@ Start of Article Module Styles
     .articleImage {
         width: 100%;
     }
+    /* Padding added to the left to push away from image */
     .authorAndDate {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        padding: 0 0 0 1rem;
     }
+    /* padding top */
     .article{
         padding: 2rem 0 0 0;
     }
 
 }
-
+/* larger font at screen size and up */
 @media only screen and (min-width: 800px) {
     .article {
         font-size: 1.3rem;
     }
 }
 
+
+
+/* Changes article layout at min-width 1000px 
+ The first article is displayed in a different layout
+and every 2nd article the Title Author and Date are changed to display on the opposite edge*/
+
 @media only screen and (min-width: 1000px) {
 
+    /* 4 column layout for Top Article that differes from the rest of the elements  */
     .container:first-of-type:Link  {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.25fr 1fr 0.25fr 0.15fr 0.25fr;
@@ -266,6 +289,8 @@ Start of Article Module Styles
         "authorAndDate authorAndDate authorAndDate authorAndDate"
         "article article article article";
     }
+
+    /* Image size is larger for first element */
     .container:first-of-type:Link .articleImage {
         object-fit: contain;
         max-width: 1000px;
@@ -275,6 +300,7 @@ Start of Article Module Styles
         flex-direction: row;
     }
 
+    /* 4 column layout for every 2nd article */
     .container:nth-child(2n + 2) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 0.25fr 0.25fr;
@@ -284,10 +310,11 @@ Start of Article Module Styles
         "article article article article";
     }
 
-    .authorAndDate:nth-child(2n) {
-        align-items: flex-end;
+    /* Removed padding for the author and date element as it aligns with the title at this size */
+    .authorAndDate {
+        padding: 0;
     }
-
+    /* If removed title will not align with author and date */
     .title {
         padding: 0 1rem 0 0;
     }
